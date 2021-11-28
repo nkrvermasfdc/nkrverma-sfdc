@@ -1,0 +1,45 @@
+<apex:component controller="ComponentControllerSystemInformation">
+    <apex:attribute name="record" assignTo="{!recordValue}"
+        type="sObject" description="The object for which to display system information" required="true"/>
+      
+    <apex:pageBlockSection title="{!$Label.SystemInformation}" columns="2">
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="{!$Label.LastModifiedBy}" />
+            <apex:outputPanel >
+                <apex:outputLink id="lastModifiedBy"
+                    onblur="LookupHoverDetail.getHover('{!$Component.lastModifiedBy}').hide();"
+                    onfocus="LookupHoverDetail.getHover('{!$Component.lastModifiedBy}', '/{!lastModifiedById}/m?retURL={!URLENCODE($CurrentPage.Url)}&isAjaxRequest=1').show();"
+                    onmouseout="LookupHoverDetail.getHover('{!$Component.lastModifiedBy}').hide();"
+                    onmouseover="LookupHoverDetail.getHover('{!$Component.lastModifiedBy}', '/{!lastModifiedById}/m?retURL={!URLENCODE($CurrentPage.Url)}&isAjaxRequest=1').show();"                     
+                 value="{!URLFOR('/' + lastModifiedById)}">{!lastModifiedByName}</apex:outputLink>&nbsp;
+                <apex:outputText value="{!convertedLastModifiedDate}" />                                                                       
+            </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem rendered="{!NOT(isMaster)}" />   
+        <apex:pageBlockSectionItem rendered="{!isMaster}">
+            <apex:outputLabel for="owner" value="{!$Label.Owner}" />
+            <apex:outputPanel >
+                <apex:image value="{!ownerPhoto}" width="16" height="16"/>&nbsp;
+                <apex:outputLink id="owner"
+                    onblur="LookupHoverDetail.getHover('{!$Component.owner}').hide();"
+                    onfocus="LookupHoverDetail.getHover('{!$Component.owner}', '/{!ownerId}/m?retURL={!URLENCODE($CurrentPage.Url)}&isAjaxRequest=1').show();"
+                    onmouseout="LookupHoverDetail.getHover('{!$Component.owner}').hide();"
+                    onmouseover="LookupHoverDetail.getHover('{!$Component.owner}', '/{!ownerId}/m?retURL={!URLENCODE($CurrentPage.Url)}&isAjaxRequest=1').show();"
+                 value="{!URLFOR('/' + ownerId)}">{!ownerName}</apex:outputLink>&nbsp;
+                <apex:outputLink value="{!URLFOR('/' + recordId + '/a?retURL=' + URLENCODE($CurrentPage.Url))}">[Change]</apex:outputLink>
+            </apex:outputPanel>
+        </apex:pageBlockSectionItem>      
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="{!$Label.CreatedBy}" />
+            <apex:outputPanel >
+                <apex:outputLink id="createdBy"
+                    onblur="LookupHoverDetail.getHover('{!$Component.createdBy}').hide();"
+                    onfocus="LookupHoverDetail.getHover('{!$Component.createdBy}', '/{!createdById}/m?retURL={!URLENCODE($CurrentPage.Url)}&isAjaxRequest=1').show();"
+                    onmouseout="LookupHoverDetail.getHover('{!$Component.createdBy}').hide();"
+                    onmouseover="LookupHoverDetail.getHover('{!$Component.createdBy}', '/{!createdById}/m?retURL={!URLENCODE($CurrentPage.Url)}&isAjaxRequest=1').show();"                     
+                 value="{!URLFOR('/' + createdById)}">{!createdByName}</apex:outputLink>&nbsp;
+                <apex:outputText value="{!convertedCreatedDate}" />                                                                       
+            </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+</apex:component>

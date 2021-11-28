@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skills__c</fullName>
+    <description>Work Skills</description>
+    <externalId>false</externalId>
+    <label>Skills</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Job_Openings__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>C++</fullName>
+                <default>false</default>
+                <label>C++</label>
+            </value>
+            <value>
+                <fullName>Java</fullName>
+                <default>false</default>
+                <label>Java</label>
+            </value>
+            <value>
+                <fullName>Dayforce</fullName>
+                <default>false</default>
+                <label>Dayforce</label>
+            </value>
+            <value>
+                <fullName>PeopleSoft</fullName>
+                <default>true</default>
+                <label>PeopleSoft</label>
+            </value>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>Selenium</fullName>
+                <default>false</default>
+                <label>Selenium</label>
+            </value>
+            <value>
+                <fullName>Hadoop</fullName>
+                <default>false</default>
+                <label>Hadoop</label>
+            </value>
+            <value>
+                <fullName>Workday</fullName>
+                <default>false</default>
+                <label>Workday</label>
+            </value>
+            <value>
+                <fullName>Oracle Apps</fullName>
+                <default>false</default>
+                <label>Oracle Apps</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>CRM at Cognizant</controllingFieldValue>
+            <controllingFieldValue>HCM at TCS</controllingFieldValue>
+            <controllingFieldValue>FIN at Polaris</controllingFieldValue>
+            <valueName>Dayforce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CRM at Cognizant</controllingFieldValue>
+            <controllingFieldValue>HRMS at Hexaware</controllingFieldValue>
+            <controllingFieldValue>HCM at TCS</controllingFieldValue>
+            <controllingFieldValue>FIN at Polaris</controllingFieldValue>
+            <valueName>PeopleSoft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HRMS at Hexaware</controllingFieldValue>
+            <controllingFieldValue>HCM at TCS</controllingFieldValue>
+            <controllingFieldValue>FIN at Polaris</controllingFieldValue>
+            <valueName>Workday</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HRMS at Hexaware</controllingFieldValue>
+            <controllingFieldValue>HCM at TCS</controllingFieldValue>
+            <controllingFieldValue>FIN at Polaris</controllingFieldValue>
+            <valueName>Oracle Apps</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

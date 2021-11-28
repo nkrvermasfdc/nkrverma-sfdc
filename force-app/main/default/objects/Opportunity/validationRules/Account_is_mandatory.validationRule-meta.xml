@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_is_mandatory</fullName>
+    <active>false</active>
+    <description>Account is mandatory while creating a opportunity</description>
+    <errorConditionFormula>ISBLANK(AccountId)</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>Account ID is mandatory while creating a opportunity, Please select.</errorMessage>
+</ValidationRule>

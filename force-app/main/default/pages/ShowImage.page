@@ -1,0 +1,10 @@
+<!-----------------------------------------------------------------------------------------------
+Date    == 10-March-2020 
+Purpose == Trailhead -- Hands-on Challenge
+Path    == Developer Beginner -> Visualforce Basics  -> Use Static Resources
+URL     == https://trailhead.salesforce.com/content/learn/modules/visualforce_fundamentals/visualforce_static_resources?trail_id=force_com_dev_beginner
+------------------------------------------------------------------------------------------------>
+
+<apex:page >
+    <apex:image url="{!URLFOR($Resource.vfimagetest, 'cats/kitten1.jpg')}"/>
+</apex:page>

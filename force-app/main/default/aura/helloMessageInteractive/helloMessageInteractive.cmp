@@ -1,0 +1,20 @@
+<!-- ====================================================================================== 
+Date    == 18-March-2020
+purpose == Trailhead -> Hands-on Challenge
+Path    == Aura Components Basics -> Handle Actions with Controllers
+URL     == https://trailhead.salesforce.com/en/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_controllers
+======================================================================================== -->
+<aura:component> 
+    <aura:attribute name="message" type="String"/> 
+    <p>Message of the day: {!v.message}</p>
+ 
+    <div>
+        <lightning:button label="You look nice today."              onclick="{!c.handleClick}"/> 
+        <lightning:button label="Today is going to be a great day!" onclick="{!c.handleClick}"/>
+    </div> 
+</aura:component>
+
+<!--
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+</aura:component>
+-->

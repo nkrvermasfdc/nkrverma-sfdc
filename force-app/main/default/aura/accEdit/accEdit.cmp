@@ -1,0 +1,42 @@
+<!-- ====================================================================================== 
+Date    == 28-May-2020
+purpose == Trailhead -> Hands on Challange
+
+Path	== Lightning Data Service Basics for Aura Components -> Manipulate Records with force:recordData
+URL		== https://trailhead.salesforce.com/content/learn/modules/lightning_data_service/lightning_data_service_manipulate_records
+======================================================================================== -->
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="recordError" type="String" />
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="accountRecord" type="Object" />
+    <aura:attribute name="recordSaveError" type="String" default=""/>
+
+	<force:recordData aura:id="recordEditor"
+                  layoutType="FULL"
+                  recordId="{!v.recordId}"
+                  targetError="{!v.recordError}"
+                  targetRecord="{!v.record}"
+                  targetFields="{!v.accountRecord}"
+                  fields="Name"
+                  mode="EDIT" />
+
+	<!-- Display an editing form -->
+  <lightning:input label="Account Name" value="{!v.accountRecord.Name}"/>
+	<lightning:button label="Save Account"  value="{!c.handleSaveRecord}" />
+
+  <aura:if isTrue="{!v.recordSaveError}">
+       <br />
+       <div class="recordError">
+           {!v.recordSaveError}
+       </div>
+    </aura:if>
+    
+  <aura:if isTrue="{!not(empty(v.recordSaveError))}">
+        <div class="recordError">
+            {!v.recordSaveError}</div>
+</aura:if>
+  
+
+</aura:component>

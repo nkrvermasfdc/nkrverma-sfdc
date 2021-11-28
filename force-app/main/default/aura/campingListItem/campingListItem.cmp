@@ -1,0 +1,84 @@
+<!-- ====================================================================================== 
+Date    == 18-March-2020
+purpose == Trailhead -> Hands-on Challenge
+
+Path    == Aura Components Basics -> Handle Actions with Controllers
+URL     == https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_controllers
+
+Path	== Aura Components Basics -> Input Data Using Forms
+URL		== https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_forms
+======================================================================================== -->
+
+<aura:component > 
+<aura:attribute name="item" type="Camping_Item__c"/>
+ 
+Name:
+<ui:outputText value="{!v.item.Name}"/>
+ 
+Price:
+<ui:outputCurrency value="{!v.item.Price__c}"/>
+ 
+Quantity:
+<ui:outputNumber value="{!v.item.Quantity__c}"/>
+ 
+Packed:
+<ui:outputCheckbox value="{!v.item.Packed__c}"/>
+ 
+</aura:component>
+
+
+
+
+
+<!--
+<aura:component >	
+    <aura:attribute name="formatdate" type="Date"/>
+    <aura:attribute name="item" type="Camping_Item__c" />
+    
+    <lightning:card title="{!v.item.Name}" iconName="action:goal"
+                    class="{!v.item.Packed__c ?
+                           'slds-theme-success' : ''}">
+        <aura:set attribute="footer">
+            <p>Date: <lightning:formattedDateTime value="{!v.formatdate}"/></p>
+            <p class="slds-text-title"><lightning:relativeDateTime value="{!v.formatdate}"/></p>
+        </aura:set>
+        <p class="slds-text-heading-medium slds-p-horizontal-small">
+           Price: <lightning:formattedNumber value="{!v.item.Price__c}" style="currency"/>
+        </p>
+        <p class="slds-p-horizontal-small">
+            Quantity: {!v.item.Quantity__c}
+        </p>
+        <p>
+            <lightning:input aura:id="toggle1"
+                             type="toggle" 
+                             label="Packed?"
+                             name="packed"
+                             class="slds-p-around-small"
+                             checked="{!v.item.Packed__c}"
+                             messageToggleActive="Yes"
+                             messageToggleInactive="No"
+                             onchange="{!c.clickPacked}"/>
+        </p>
+    </lightning:card>
+</aura:component>
+-->
+
+<!--<p>Name     : <ui:outputText value="{!v.item.Name}"/></p>        
+    <p>Price	: <ui:outputCurrency value="{!v.item.Price__c}"/></p>
+    <p>Quantity : <ui:outputNumber value="{!v.item.Quantity__c}"/></p>
+    <p>Packed	: <ui:outputCheckbox value="{!v.item.Packed__c}"/></p>--> 
+
+<!--<aura:component >	
+    <aura:attribute name="item" type="Camping_Item__c" />    
+    <p>Name     : {!v.item.Name}     </p>        
+    <p>Price:   <lightning:formattedNumber value="{!v.item.Price__c}" style="currency"/></p>
+    <p>Quantity:<lightning:formattedNumber value="{!v.item.Quantity__c}" style="number"/></p>    
+    <p><lightning:input type ="toggle" label="Packed?" name ="Packed" checked="{!v.item.Packed__c}"/></p>    
+    <div><lightning:button label="Packed!" onclick="{!c.packItem}"/></div>
+</aura:component>-->
+    <!-- 
+	<p> Price    : {!v.item.Price__c} </p>
+    <p> Quantity : {!v.item.Quantity__c}   </p>
+    <p> Packed   : {!V.item.Packed__c}     </p>
+	-->
+    <!-- default="" required="true" -->

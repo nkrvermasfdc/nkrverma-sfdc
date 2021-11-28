@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATT_EXP__View</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>View</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+
+var originalValue = this.value;
+this.value = &quot;Processing...&quot;;
+var request = new Object();
+request.Action = &quot;view&quot;;
+request.AttachmentId = &quot;{!ATT_EXP__Attachment__c.Id}&quot;;
+request.UserAgent = navigator.userAgent;
+request.versionId = &quot;{!ATT_EXP__Attachment_Version__c.ATT_EXP__Version__c}&quot;;
+var attachmentURL = sforce.apex.execute(&quot;ATT_EXP.AttachmentsController&quot;,&quot;GetViewSignature&quot;,{JSONrequest:JSON.stringify(request)});
+this.value = originalValue;
+window.open(attachmentURL);</url>
+</WebLink>

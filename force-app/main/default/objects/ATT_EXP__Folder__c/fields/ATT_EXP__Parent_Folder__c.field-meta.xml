@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATT_EXP__Parent_Folder__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Parent Folder under which this folder is listed as a sub folder. If no Parent folder is specified current folder will be treated as root folder.</description>
+    <externalId>false</externalId>
+    <label>Parent Folder</label>
+    <referenceTo>ATT_EXP__Folder__c</referenceTo>
+    <relationshipLabel>Folders</relationshipLabel>
+    <relationshipName>Folders</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Openings__c</fullName>
+    <externalId>false</externalId>
+    <label>Job_Openings</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CRM at Cognizant</fullName>
+                <default>false</default>
+                <label>CRM at Cognizant</label>
+            </value>
+            <value>
+                <fullName>HRMS at Hexaware</fullName>
+                <default>false</default>
+                <label>HRMS at Hexaware</label>
+            </value>
+            <value>
+                <fullName>HCM at TCS</fullName>
+                <default>false</default>
+                <label>HCM at TCS</label>
+            </value>
+            <value>
+                <fullName>FIN at Polaris</fullName>
+                <default>false</default>
+                <label>FIN at Polaris</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

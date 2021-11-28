@@ -1,0 +1,19 @@
+<apex:page controller="Wizard_Class">
+    <apex:form >
+        <apex:pageBlock title="Account Details">
+            <apex:pageblockButtons >
+                <apex:commandButton value="Next Page" action="{!goto_contactPage}"/>
+                <!--<apex:commandButton value="Review" action="{!goto_reviewPage}"/>-->
+            </apex:pageblockButtons>
+            
+            <apex:pageblockSection columns="1">
+                <apex:inputField value="{!a.Name}"/>
+                <apex:inputField value="{!a.Type}"/>
+                <apex:inputField value="{!a.Industry}"/>
+                <apex:inputField value="{!a.Phone}"/>
+                <apex:inputField value="{!a.Fax}"/>
+            </apex:pageblockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

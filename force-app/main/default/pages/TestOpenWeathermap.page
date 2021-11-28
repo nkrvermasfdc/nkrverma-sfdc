@@ -1,0 +1,14 @@
+<apex:page standardcontroller="Account" extensions="TestOpenWeathermap" >
+
+    <apex:pageBlock Title="{!city} Weather">
+        <apex:pageBlockSection >        
+            <apex:pagemessages >    </apex:pagemessages>
+            <apex:outputText label="Temperature" value="{!temp}"/>
+            <apex:outputText label="Pressure"    value="{!pressure}"/>
+            <apex:outputText label="Humidity"    value="{!humidity}"/>
+            <apex:outputText label="Minimum"     value="{!temp_min}"/>
+            <apex:outputText label="Maximum"     value="{!temp_max}"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+</apex:page>

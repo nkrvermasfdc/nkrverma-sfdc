@@ -1,0 +1,172 @@
+<!-- ====================================================================================== 
+Date    == 18-March-2020
+purpose == Trailhead -> Hands-on Challenge
+
+Path    == Aura Components Basics -> Handle Actions with Controllers
+URL     == https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_controllers
+
+Path	== Aura Components Basics -> Input Data Using Forms
+URL		== https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_forms
+======================================================================================== -->
+ 
+<aura:component controller="CampingListController">    
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:handler name="addItem" event="c:addItemEvent" action="{!c.handleAddItem }"/>
+    
+    <aura:attribute name="items" type="Camping_Item__c[]"/>
+    <aura:attribute name="newItem" type="Camping_Item__c" default="{'Name':'',
+                                                                   'Quantity__c':0,
+                                                                   'Price__c':0,
+                                                                   'Packed__c':false,
+                                                                   'sobjectType':'Camping_Item__c'}"/>
+    
+    
+    
+    <!-- NEW Campaing FORM --> 
+    <div class="slds-col slds-col--padded slds-p-top--large">
+        
+        
+        <c:campingHeader/>
+        <div aria-labelledby="newCampaingForm">
+            
+            <!-- BOXED AREA -->
+            <fieldset class="slds-box slds-theme--default slds-container--small">
+                
+                <legend id="newCampaingForm" class="slds-text-heading--small
+                                                    slds-p-vertical--medium">
+                    Add Expense
+                </legend>
+                
+                <div class="slds-col slds-col--padded slds-p-top--large">
+                    <c:campingListForm/>
+                </div>    
+    
+    
+</fieldset>
+<!-- / BOXED AREA -->
+ 
+</div>
+<!-- / CREATE NEW EXPENSE -->
+</div>
+<!-- ITERATIING ITEM LISTS -->
+<div class="slds-card slds-p-top--medium">
+ 
+<c:campingHeader/>
+ 
+    <section class="slds-card__body">
+        <div id="list" class="row">
+            <aura:iteration items="{!v.items}" var="item">
+                <c:campingListItem item="{!item}"/>
+            </aura:iteration>
+        </div>
+    </section>
+    </div>
+<!-- / ITERATIING ITEM LISTS -->
+</aura:component>
+
+
+
+
+
+<!--
+<aura:component controller="CampingListController">
+    //comment <!- Inside Camping List > Component<br/>
+    <aura:attribute name="items" type="Camping_Item__c[]"/>
+    <aura:attribute name="newItem" type="Camping_Item__c" 
+                    default="{'sobjectType':'Camping_Item__c',
+                              'Name': '',
+                              'Quantity__c': 0,
+                              'Price__c': 0,
+                              'Packed__c': false}"/>
+    
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    
+    //comment <!- NEW CAMPING FORM 
+    <div class="slds-col slds-col-padded slds-p-top-large">
+        //comment <!- Inside Camping List > Component > Calling Camping Header in Middle<br/>
+        <c:campingHeader/>
+    
+        <div aria-labelledby="newCampingForm">
+            //comment <!-BOXED AREA 
+            <fieldset class="slds-box slds-theme-default slds-container-small">
+                <legend id="newCampingForm" class="slds-text-heading-small slds-p-vertical-medium">
+                    Add Camping
+                </legend>
+                
+                //comment <!- Ctreate New Camping Form 
+                <form class="slds-form-stacked">
+                    //comment <!- For Name Field 
+                    <lightning:input aura:id="campingform" label="Camping Name"
+                                     name="campingname"
+                                     value="{!v.newItem.Name}"
+                                     required="true"/>
+                    //comment <!- For Quantity Field 
+                    <lightning:input aura:id="campingform" label="Quantity" type="number"
+                                     name="campingquantity"
+                                     min="1"
+                                     value="{!v.newItem.Quantity__c}"
+                                     messageWhenRangeUnderflow="Enter minimum 1 Quantity"/>
+                    //comment <!- For Price Field
+                    <lightning:input aura:id="campingform" label="Price"
+                                     formatter="currency"
+                                     name="price"
+                                     value="{!v.newItem.Price__c}"/>
+                    //comment <!- For Check Box
+                    <lightning:input aura:id="campingform" label="Packed" type="checkbox"
+                                     name="packed"
+                                     checked="{!v.newItem.Packed__c}"/>
+                    //comment <!- For Create Camping Button
+                    <lightning:button label="Create Camping"
+                                      class="slds-m-top-medium"
+                                      variant="brand"
+                                      onclick="{!c.clickCreate}"/>
+                </form>
+                //comment <!- /Create New Expense Form 
+                
+            </fieldset>
+            //comment <!- Boxed Area
+        </div>
+        	//comment <!- Create New Expense
+    </div>
+    <Br/>    
+    //comment <!- ITERATING ITEM LIST
+    //comment <!- <div class="slds-card slds-p-top-medium">
+        //comment <!- Inside Camping List > Component > Calling Camping Header in Last
+        //comment <!- <c:campingHeader/>
+        <lightning:card title="Campings">
+            <p class="slds-p-horizontal-small">
+                <aura:iteration items="{!v.items}" var="item">
+                    <c:campingListItem item="{!item}"/>
+                </aura:iteration>
+            </p>
+        </lightning:card>
+    //comment <!- </div>
+    //comment <!- ITERATING ITEM LISTS
+    
+</aura:component> 
+-->
+
+
+
+
+
+ <!-- ======================================================================================= -->
+    <!--<OL>
+         <li> Bug Spray </li>
+         <li> Bear Repellant </li>
+         <li> Goat Food </li>    
+    </OL>-->
+<!-- ======================================================================================= -->
+
+<!-- ======================================================================================= -->
+<!--<section class="slds-card__body">
+            <div id="list" class="row">
+                <br/>
+                <aura:iteration items="{!v.items}" var="item">
+                    <c:campingListItem item="{!item}"/>
+                </aura:iteration>
+            </div>  
+            <br/>
+            <br/>
+        </section>-->
+<!--<aura:attribute name="expenses" type="Expense__c[]"/>-->

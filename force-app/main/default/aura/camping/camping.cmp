@@ -1,0 +1,16 @@
+<!-- ====================================================================================== 
+Date    == 18-March-2020
+purpose == Trailhead -> Hands-on Challenge
+
+Path    == Aura Components Basics -> Handle Actions with Controllers
+URL     == https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_controllers
+
+Path	== Aura Components Basics -> Input Data Using Forms
+URL		== https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_forms
+======================================================================================== -->
+<aura:component >
+    <!-- Inside Camping Component > Calling Camping Header<br/> -->
+    <!-- <c:campingHeader />-->
+    <!-- Inside Camping Component > Calling Camping List<br/>-->
+    <c:campingList />
+</aura:component>

@@ -1,0 +1,22 @@
+<apex:page standardController="opportunity" recordSetVar="oppty">
+  <apex:form >
+      <apex:pageblock >
+          
+          <apex:pageblockButtons >
+              <apex:commandButton value="Save the Records" action="{!save}"/>
+          </apex:pageblockButtons>
+          
+          <apex:pageblockTable value="{!oppty}" var="opp">
+              <apex:column value="{!opp.Name}"/>
+              <apex:column HeaderValue="Stage">
+                  <apex:inputfield value="{!opp.StageName}"/>
+              </apex:column>
+              <apex:column HeaderValue="Closed Date for Oppty">
+                  <apex:inputfield value="{!opp.CloseDate}"/>
+              </apex:column>    
+              
+          </apex:pageblockTable>
+          
+      </apex:pageblock>
+  </apex:form>
+</apex:page>

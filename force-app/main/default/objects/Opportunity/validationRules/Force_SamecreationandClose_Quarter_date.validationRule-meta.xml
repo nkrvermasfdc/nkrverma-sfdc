@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Force_SamecreationandClose_Quarter_date</fullName>
+    <active>false</active>
+    <description>Force Same creation and Close Quarter date</description>
+    <errorConditionFormula>MONTH( CloseDate )  &lt;&gt; MONTH( DATEVALUE(CreatedDate) ) ||
+ YEAR ( CloseDate )  &lt;&gt; YEAR ( DATEVALUE(CreatedDate) )</errorConditionFormula>
+    <errorMessage>Creation and Close should in the same Quarter .</errorMessage>
+</ValidationRule>

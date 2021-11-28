@@ -1,0 +1,19 @@
+<apex:page controller="Search_Interface">
+    <apex:form >
+    
+        <apex:PageBlock title="Search Interface">
+            <apex:inputText value="{!keyword}"/>
+            <apex:commandButton value="Search" action="{!search}" reRender="results"/>
+            
+            <apex:pageblocktable value="{!acts}" var="a" id="results">
+                <apex:column value="{!a.Name}"/>
+                <apex:column value="{!a.Type}"/>
+                <apex:column value="{!a.Industry}"/>
+                <apex:column value="{!a.Phone}"/>
+                <apex:column value="{!a.Fax}"/>
+            </apex:pageblocktable>
+            
+        </apex:PageBlock>
+    
+    </apex:form>
+</apex:page>

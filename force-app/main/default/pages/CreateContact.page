@@ -1,0 +1,20 @@
+<!-----------------------------------------------------------------------------------------------
+Date    == 10-March-2020 
+Purpose == Trailhead -- Hands on challange
+Path    == Developer Beginner -> Visualforce Basics  -> Input Data Using Forms
+URL     == https://trailhead.salesforce.com/content/learn/modules/visualforce_fundamentals/visualforce_forms?trail_id=force_com_dev_beginner
+------------------------------------------------------------------------------------------------>
+
+<apex:page standardController="Contact ">
+    <apex:form >
+        <apex:pageBlock title="Create Contact">
+            <apex:inputField value="{! Contact.FirstName }"/>
+            <apex:inputField value="{! Contact.LastName }"/>        
+            <apex:inputField value="{! Contact.Email }"/>        
+        
+            <apex:pageBlockButtons >
+                    <apex:commandButton action="{! save }" value="Save" />        
+            </apex:pageBlockButtons>        
+    	</apex:pageBlock>
+    </apex:form>    
+</apex:page>

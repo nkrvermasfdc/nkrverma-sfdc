@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATT_EXP__Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This field specifies current status of the Attachment version whether the version is being uploaded or available. Also when a Attachment is archived all it&apos;s version records are marked as &quot;Archived&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field specifies current status of the Attachment version whether the version is being uploaded or available. Also when a Attachment is archived all it&apos;s version records are marked as &quot;Archived&quot;.</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,75 @@
+<apex:page standardController="objfordynamicvfpage__c" extensions="dynamicvfp_controller" >
+<apex:form >
+    <apex:pageBlock title="Page Block" tabStyle="Contract"> 
+    
+      <apex:pageBlockSection title="Page Block Section" columns="1" >   
+            <Table value="kk" border="5PX" Width="1050PX">
+                    <TR> <TD Width="100PX"> <H1>Name        </H1></TD> <TD><H1> {!$User.FirstName}  </H1></TD> </TR> <BR></BR>
+                    <TR> <TD Width="100PX"> <H1>Country     </H1></TD> <TD><H1> {!$User.Country}    </H1></TD> </TR> <BR></BR>
+                    <TR> <TD Width="100PX"> <H1>City        </H1></TD> <TD><H1> {!$User.City}       </H1></TD> </TR> <BR></BR>
+                    <TR> <TD Width="100PX"> <H1>Company Name</H1></TD> <TD><H1> {!$User.CompanyName}</H1></TD> </TR> <BR></BR>
+                    <TR> <TD Width="100PX"> <H1>Contact ID  </H1></TD> <TD><H1> {!$User.ContactId}  </H1></TD> </TR> <BR></BR>
+                    <TR> <TD Width="100PX"> <H1>Department  </H1></TD> <TD><H1> {!$User.Department} </H1></TD> </TR> <BR></BR>
+                    <TR> <TD Width="100PX"> <H1>Profile ID  </H1></TD> <TD><H1> {!$User.ProfileId}  </H1></TD> </TR> <BR></BR>
+                    <TR> <TD Width="100PX"> <H1>Active      </H1></TD> <TD><H1> {!$User.IsActive}   </H1></TD> </TR> <BR></BR>
+            </Table> 
+            
+            <BR></BR>
+            
+      <Apex:pageblockTable value="{!All_Employee}" var="AE" rows="8">
+      
+            <Apex:column headerValue="Name">
+                <Apex:Outputfield value="{!AE.Name}" />            
+            </Apex:column>
+
+            <Apex:column headerValue="{!Label1}">
+                <Apex:Outputfield value="{!AE.F1_Text__c}" />            
+            </Apex:column>
+                                        
+            <Apex:column headerValue="{!Label2}">
+                <Apex:Outputfield value="{!AE.F2_Number__c}" />            
+            </Apex:column>
+            
+            <Apex:column headerValue="{!Label3}">
+                <Apex:Outputfield value="{!AE.F3_Ceckbox__c}" />            
+            </Apex:column>  
+            
+      <Apex:inlineEditSupport />        
+      </Apex:pageblockTable>  
+      
+      <apex:panelGrid columns="4" id="theGrid" border="5">
+        <apex:outputText value="First" id="theFirst"/>
+        <apex:outputText value="Second" id="theSecond"/>
+        <apex:outputText value="Third" id="theThird"/>
+        <apex:outputText value="Fourth" id="theFourth"/>
+      </apex:panelGrid>
+ 
+      <apex:panelGrid bgcolor="Brown" border="5" columns="6" title="Grid" Width="1050">
+      </apex:panelGrid>
+<!-- Correctly Working
+            <Table value="kk" border="5PX" Width="1050PX" Bordercolor="cream">
+                <Apex:inputfield value="{!objfordynamicvfpage__c.F1_Text__c}" Label="{!Label1}" />
+                <Apex:inputfield value="{!objfordynamicvfpage__c.F2_Number__c}" Label="{!Label2}"/>
+                <Apex:inputfield value="{!objfordynamicvfpage__c.F3_Ceckbox__c}" label="{!Label3}"/>
+            </Table>
+-->
+
+<!--        //<Apex:Outputfield value="{!o.Amount}">
+            //    <Apex:inlineEditSupport />
+            //</Apex:Outputfield>
+            
+            //<Apex:column value="{!o.Name}"/>
+            //<Apex:column value="{!o.ExpectedRevenue}"/>
+            //<Apex:column value="{!o.StageName}"/>
+            //<Apex:column value="{!o.CloseDate}"/>
+-->   
+      
+      </apex:pageBlockSection>
+      
+      <apex:pageblockbuttons >
+            <apex:commandButton value="Submit" action="{!save}"/>
+      </apex:pageblockbuttons>
+        
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

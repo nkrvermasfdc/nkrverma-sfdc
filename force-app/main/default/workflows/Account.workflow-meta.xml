@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>set_the_Type_field_Customer</fullName>
+        <description>set the Type field_Customer</description>
+        <field>Type</field>
+        <literalValue>Customer</literalValue>
+        <name>set the Type field_Customer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>set_the_Type_field_Pending</fullName>
+        <description>set the Type field_Pending</description>
+        <field>Type</field>
+        <literalValue>Pending</literalValue>
+        <name>set the Type field_Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>set_the_Type_field_Prospect</fullName>
+        <description>set the Type field_Prospect</description>
+        <field>Type</field>
+        <literalValue>Prospect</literalValue>
+        <name>set the Type field_Prospect</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Acc Mandatory</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>Acc Mandatory</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

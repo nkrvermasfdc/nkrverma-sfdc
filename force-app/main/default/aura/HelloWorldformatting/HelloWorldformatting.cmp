@@ -1,0 +1,11 @@
+<aura:component >
+    
+	<h1>Hello world formatting</h1>
+    
+    <div>
+    	<div> I am Red </div>
+        <div> I am Blue </div>
+    	<div> I am Green </div>
+    </div>
+    
+</aura:component>

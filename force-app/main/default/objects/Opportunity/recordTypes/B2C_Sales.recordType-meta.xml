@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B2C_Sales</fullName>
+    <active>true</active>
+    <businessProcess>B2C Sales</businessProcess>
+    <compactLayoutAssignment>B2C_Compact_Layout</compactLayoutAssignment>
+    <description>Select when creating an Oppty for a person</description>
+    <label>B2C Sales</label>
+    <picklistValues>
+        <picklist>CR__c</picklist>
+        <values>
+            <fullName>Best Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Higher Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inferior Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lower Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Superior Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Worst Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Close_Reason__c</picklist>
+        <values>
+            <fullName>Best Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Higher Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inferior Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lower Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Superior Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Worst Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DB_Competitor__c</picklist>
+        <values>
+            <fullName>Competitor A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DeliveryInstallationStatus__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yet to begin</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Job_Openings__c</picklist>
+        <values>
+            <fullName>CRM at Cognizant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIN at Polaris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HCM at TCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HRMS at Hexaware</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Size__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>STAGE_NAME__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Skills__c</picklist>
+        <values>
+            <fullName>C%2B%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dayforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hadoop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Java</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oracle Apps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PeopleSoft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Selenium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workday</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Existing Customer - Replacement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Customer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

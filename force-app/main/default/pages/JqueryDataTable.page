@@ -1,0 +1,37 @@
+<apex:page controller="JqueryDataTableContrlr">
+    <apex:stylesheet value="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"/>
+    <apex:form >
+        <apex:pageBlock >
+            <table id="theTable">
+                <thead>
+                    <tr>
+                        <th>Case Number</th>
+                        <th>Company Name</th>
+                        <th>Person Name</th>
+                        <th>Status</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <apex:repeat value="{!CaseList}" var="cs">
+                        <tr>
+                            <td>{!cs.CaseNumber}</td>
+                            <td>{!cs.Account.Name}</td>
+                            <td>{!cs.Contact.Name}</td>
+                            <td>{!cs.Status}</td>
+                            <td>{!cs.Priority}</td>
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:includeScript value="//code.jquery.com/jquery-1.12.4.js"/>
+    <apex:includeScript value="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"/>
+    <script>
+        $(document).ready(function() {
+            $('#theTable').DataTable( {
+            });
+        } );
+    </script>
+</apex:page>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Amount</field>
+        <field>CloseDate</field>
+        <field>Discount_Rate__c</field>
+        <field>StageName</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>adhoc</type>
+            </approver>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Opportunity.Discount_Rate__c</field>
+                <operation>lessOrEqual</operation>
+                <value>5</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Discount &lt;=5</label>
+        <name>Discount_5</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>nkrverma.sfdc@gmail.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Discount &gt; 5 and &lt;= 10</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Opportunity.Discount_Amount__c</field>
+                <operation>greaterThan</operation>
+                <value>5</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.Discount_Amount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>10</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Discount &gt; 5 and &lt;= 10</label>
+        <name>Discount_5_and_10</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>guestadmin_nkrverma.sfdctest1@gmail.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Discount &gt;10</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Opportunity.Discount_Rate__c</field>
+                <operation>greaterThan</operation>
+                <value>10</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Discount &gt;10</label>
+        <name>Discount_10</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>(&lt; = 5%)   ---   (&gt; 5%  &lt; = 10%)   ---   (&gt; 10%)</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Opportunity.Discount_Rate__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Discount Rate Approval - 3 Steps</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

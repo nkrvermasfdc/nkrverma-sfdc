@@ -1,0 +1,13 @@
+<apex:page standardController="Account" extensions="General_All_Accounts">
+
+ {!Hello}
+ <Apex:pageBlock Title="Account">   
+    <Apex:pageblocksection title="All Accounts" columns="1" Collapsible="true">
+    
+    <Apex:relatedList List="opportunities"/>
+    <Apex:relatedList List="contacts"/>    
+    <Apex:relatedList List="cases"/>
+        
+    </Apex:pageblocksection>
+ </Apex:pageBlock>
+</apex:page>

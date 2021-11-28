@@ -1,0 +1,22 @@
+<apex:page controller="YT_JeetSingh_Test0001">
+  <apex:form > 
+    <apex:pageblock >
+    
+        <apex:pageblockSection >      
+          <!-- Name of Account : -->
+          <apex:inputField Value="{!a1.Name}"/><br/>
+  
+          <!-- Select Industry of Account : -->
+          <apex:inputField Value="{!a1.Industry}"/><br/>
+  
+          <!-- Select Type of Account : -->
+          <apex:inputField Value="{!a1.Type}"/><br/>   
+        </apex:pageblockSection>
+        
+        <apex:pageblockbuttons >
+            <apex:commandButton value="Save" action="{!save}"/>
+        </apex:pageblockbuttons>
+        
+    </apex:pageblock>
+  </apex:form>
+</apex:page>

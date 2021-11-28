@@ -1,0 +1,48 @@
+<Apex:page StandardController="Opportunity" recordsetvar="ops">
+ <Apex:form >
+ 
+    <Apex:PageBlock Title="List of Ops">
+    <Apex:pageblockSection title="All Opportunities" columns="1" Collapsible="true">
+
+      <Apex:pageblockTable value="{!ops}" var="o" rows="8">
+        <Apex:column value="{!o.Name}"/>
+        <Apex:column headerValue="Amount">
+            <Apex:Outputfield value="{!o.Amount}">
+                <Apex:inlineEditSupport />
+            </Apex:Outputfield>
+        </Apex:column>
+        <Apex:column value="{!o.ExpectedRevenue}"/>
+        <Apex:column value="{!o.StageName}"/>
+        <Apex:column value="{!o.CloseDate}"/>
+        
+       
+      </Apex:pageblockTable>
+      
+    </Apex:pageblockSection>
+
+
+      <Apex:pageblockButtons location="Top">
+          <Apex:commandButton value="First Page" Action="{!First}"/> 
+          <Apex:commandButton value="Next Page" Action="{!Next}"/> 
+          <Apex:commandButton value="Previous Page" Action="{!Previous}"/> 
+          <Apex:commandButton value="Last Page" Action="{!Last}"/> 
+      </Apex:pageblockButtons>
+<!--
+      <Apex:PageBlocktable value ="{'contact'}">
+         <Apex:inputfield value ="c.Name">
+         <Apex:inputfield value ="c.Phone">
+         <Apex:inputfield value ="c.Address">
+
+         <Apex:Coloumn Header value="Phone">
+         </Apex:Coloumn>
+
+         <Apex:Outputfield value ="c.Name">
+
+      <Apex:inLineEditSupport/>
+      </Apex:PageBlocktable>
+-->
+
+    </Apex:PageBlock>
+
+ </Apex:form>
+</Apex:page>

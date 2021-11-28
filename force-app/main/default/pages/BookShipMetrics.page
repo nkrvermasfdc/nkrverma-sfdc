@@ -1,0 +1,51 @@
+<apex:Page >
+
+
+<!--
+<apex:page standardController="Book_Ship_Metric__c" extensions="BookShipMetricsController">
+  <apex:form >
+  <apex:pageBlock >
+  <apex:pageBlockButtons >
+  <apex:commandButton value="Save" action="{!save}"/>
+  <apex:commandButton value="Cancel" action="{!cancel}"/>
+  </apex:pageBlockButtons>
+
+  <table width="100%">
+   <tr>
+   <td>
+   <apex:outputLabel value="Business Unit" ></apex:outputLabel>
+   <apex:inputField value="{!Book_Ship_Metric__c.Business_Unit__c}">
+   <apex:actionSupport event="onchange" action="{!TargetValues}" reRender="resultTable" />
+   </apex:inputField> 
+   </td>
+   <td>
+   <apex:outputLabel value="Region" ></apex:outputLabel>
+   <apex:inputField value="{!Book_Ship_Metric__c.Region__c}">
+   <apex:actionSupport event="onchange" action="{!TargetValues}" reRender="resultTable" />
+   </apex:inputField>
+   </td>
+   <td>
+   <apex:outputLabel value="Quarter" ></apex:outputLabel>
+    <apex:selectList value="{!selectedQuarter}" size="1" multiselect="false">
+            <apex:selectOptions value="{!Quarter}"></apex:selectOptions>
+        </apex:selectList> 
+    </td>
+    <td>
+    <apex:outputLabel value="Fiscal Year" ></apex:outputLabel>
+    <apex:selectList value="{!selectedFiscalYear}" size="1" multiselect="false">
+            <apex:selectOptions value="{!FiscalYear}"></apex:selectOptions>
+        </apex:selectList>
+     </td>
+     </tr>
+     </table>       
+
+  <apex:outputPanel id="resultTable">
+   <table>
+
+  </table>
+ </apex:outputPanel>   
+ </apex:pageBlock>
+ </apex:form>
+ https://salesforce.stackexchange.com/questions/44005/grid-in-visualforce-page
+ -->
+ </apex:page>

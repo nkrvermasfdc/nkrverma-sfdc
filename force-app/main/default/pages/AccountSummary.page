@@ -1,0 +1,20 @@
+<!----------------------------------------------------------------------------------------------- 
+Date    == 08-March-2020 
+Purpose == Trailhead -- Learning Objective
+Path    == Developer Beginner -> Visualforce Basics  -> Use Standard Controllers
+URL     == https://trailhead.salesforce.com/en/content/learn/modules/visualforce_fundamentals/visualforce_standard_controllers
+------------------------------------------------------------------------------------------------>
+
+ 
+<apex:page standardController="Account">
+    
+    <apex:pageBlock title="Account Summary">
+        <apex:pageBlockSection >
+            Name: {! Account.Name } <br/>
+            Phone: {! Account.Phone } <br/>
+            Industry: {! Account.Industry } <br/>
+            Revenue: {! Account.AnnualRevenue } <br/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+</apex:page>

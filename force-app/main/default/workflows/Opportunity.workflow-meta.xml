@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_A_Opp_Submitted_for_Approval</fullName>
+        <description>Email A - Opp Submitted for Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>guestadmin_nkrverma.sfdctest1@gmail.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>nkrverma.sfdc@gmail.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/WF_Opp_Submitted_for_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Oppty_Prospect</fullName>
+        <description>Oppty Prospect</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>nkrverma23@gmail.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Oppty_close_date_reminder</template>
+    </alerts>
+    <alerts>
+        <fullName>Oppty_close_date_reminder</fullName>
+        <description>Oppty close date reminder</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Oppty_close_date_reminder</template>
+    </alerts>
+    <alerts>
+        <fullName>Oppty_close_date_reminder1</fullName>
+        <description>Oppty close date reminder</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Oppty_close_date_reminder</template>
+    </alerts>
+    <alerts>
+        <fullName>Oppty_close_date_reminder2</fullName>
+        <ccEmails>nkrverma@gmail.com</ccEmails>
+        <description>Oppty close date reminder</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Oppty_close_date_reminder</template>
+    </alerts>
+    <alerts>
+        <fullName>Test</fullName>
+        <description>Test</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>nkrverma.sfdc@gmail.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SalesNewCustomerEmail</template>
+    </alerts>
+    <alerts>
+        <fullName>Test_Email_Notification_EmailAlert</fullName>
+        <description>Test_Email_Notification_EmailAlert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>nkrverma.sfdc@gmail.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Test_Email_Notification</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>CB1FalseCB2False</fullName>
+        <description>CB1FalseCB2False</description>
+        <field>Checkbox2__c</field>
+        <literalValue>0</literalValue>
+        <name>CB1FalseCB2False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CB1FalseCB2True</fullName>
+        <description>CB1 False CB2 True</description>
+        <field>Checkbox2__c</field>
+        <literalValue>1</literalValue>
+        <name>CB1FalseCB2True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Format_Oppty_Name</fullName>
+        <field>Name</field>
+        <formula>Name  &amp; &quot; - &quot; &amp;
+ Account.Name &amp; &quot; - &quot; &amp;
+ TEXT( MONTH( CloseDate ) )  &amp; &quot;/&quot; &amp;
+ TEXT( YEAR( CloseDate ) )</formula>
+        <name>Format Oppty Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Increment_Push_Counter_Field</fullName>
+        <description>Increment the Push Counter by 1</description>
+        <field>Push_Counter__c</field>
+        <formula>IF( 
+ISNULL( Push_Counter__c ), 
+1, 
+Push_Counter__c + 1 
+)</formula>
+        <name>Increment Push Counter Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Oppty_Prospect_Field_Update</fullName>
+        <description>Oppty Prospect Field Update</description>
+        <field>Amount</field>
+        <name>Oppty Prospect Field Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>CB1FalseCB2False</fullName>
+        <actions>
+            <name>CB1FalseCB2False</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Checkbox1__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Checkbox2__c</field>
+            <operation>notEqual</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>CB1FalseCB2False</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CB1TrueCB2False</fullName>
+        <actions>
+            <name>CB1FalseCB2True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Checkbox1__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Checkbox2__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>CB1TrueCB2False</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Format Oppty Name</fullName>
+        <actions>
+            <name>Format_Oppty_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.IsClosed</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Oppty Prospect</fullName>
+        <actions>
+            <name>Oppty_Prospect</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Oppty_Prospect_Field_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Oppty_Prospect</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Prospecting</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Amount</field>
+            <operation>greaterThan</operation>
+            <value>232323</value>
+        </criteriaItems>
+        <description>Oppty Prospect</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Oppty Workflow Picklist Test</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Qualification</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Oppty close date reminder</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.CloseDate</field>
+            <operation>greaterThan</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Oppty_close_date_reminder2</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Opportunity.CloseDate</offsetFromField>
+            <timeLength>-7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Push Counter</fullName>
+        <actions>
+            <name>Increment_Push_Counter_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Increment the Push Counter field by 1</description>
+        <formula>IF(  CloseDate &gt; PRIORVALUE( CloseDate ),  IF (MONTH(CloseDate) &lt;&gt; MONTH(PRIORVALUE( CloseDate )) ,  TRUE,  FALSE),  FALSE)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Test</fullName>
+        <actions>
+            <name>Test</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <formula>Amount &gt;= 1800000</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Test PD1</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Amount</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Test_Email_Notification</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Description</field>
+            <operation>equals</operation>
+            <value>Test Email Notification</value>
+        </criteriaItems>
+        <description>Test Email Notification</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Test_Email_Notification_EmailAlert</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Opportunity.CloseDate</offsetFromField>
+            <timeLength>-5</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>WF Opp Submitted for Approval</fullName>
+        <actions>
+            <name>Email_A_Opp_Submitted_for_Approval</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Discount_Rate__c</field>
+            <operation>greaterThan</operation>
+            <value>5</value>
+        </criteriaItems>
+        <description>WF Opp Submitted for Approval</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Oppty_Prospect</fullName>
+        <assignedTo>nkrverma.sfdc@gmail.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Oppty Prospect Task Description</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CloseDate</offsetFromField>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Oppty Prospect</subject>
+    </tasks>
+</Workflow>

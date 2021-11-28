@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Date_Cant_be_blank</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK( Start_Date__c )</errorConditionFormula>
+    <errorDisplayField>Start_Date__c</errorDisplayField>
+    <errorMessage>Please Select values for Start date
+Note : Start date can not be blank.</errorMessage>
+</ValidationRule>

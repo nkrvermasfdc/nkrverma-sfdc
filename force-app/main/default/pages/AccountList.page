@@ -1,0 +1,16 @@
+<!-----------------------------------------------------------------------------------------------
+Date    == 10-March-2020 
+Purpose == Trailhead -- Hands-on Challenge
+Path    == Developer Beginner -> Visualforce Basics  -> Use Standard List Controllers
+URL     == https://trailhead.salesforce.com/content/learn/modules/visualforce_fundamentals/visualforce_standard_list_controllers?trail_id=force_com_dev_beginner
+------------------------------------------------------------------------------------------------>
+
+<apex:page standardController="Account" recordSetVar="accounts">
+    <apex:repeat value="{!accounts}" var="a">
+        <li>
+            <apex:outputLink value="/{!a.id}">
+                {!a.name}
+            </apex:outputLink>
+        </li>
+    </apex:repeat>
+</apex:page>

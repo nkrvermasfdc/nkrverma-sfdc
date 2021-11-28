@@ -1,0 +1,42 @@
+<!-- ====================================================================================== 
+Date    == 18-March-2020
+purpose == Trailhead -> Hands-on Challenge
+
+Path    == Aura Components Basics -> Handle Actions with Controllers
+URL     == https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_controllers
+
+Path	== Aura Components Basics -> Input Data Using Forms
+URL		== https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_forms
+======================================================================================== -->
+
+<aura:component >
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+    <lightning:layoutItem >
+    <lightning:icon iconName="action:goal" alternativeText="My Camping"/>
+</lightning:layoutItem>
+    <lightning:layoutItem padding="horizontal-small">
+<div class="page-section page-header">
+<h1 class="slds-text-heading--label">Camping</h1>
+<h2 class="slds-text-heading--medium">My Camping</h2>
+</div>
+</lightning:layoutItem>
+</lightning:layout>
+</aura:component>
+ 
+    <!--<h1><c:campingList /></h1>-->
+    <!-- Inside Camping Header > Component <br/>-->
+<!--
+<aura:component >
+    <Lightning:layout class="slds-page-header slds-page-header-object-home">
+        <Lightning:layoutitem>
+            <Lightning:icon iconName="action:goal" alternativeText="My Camping"/>        
+        </Lightning:layoutitem>        
+    	<Lightning:layoutitem padding="horizontal-small">
+            <div class="page-section page-header">
+            	<h1 class="slds-text-heading-label">Camping</h1>
+                <h2 class="slds-text-heading-medium">My Camping</h2>
+            </div>
+        </Lightning:layoutitem>
+    </Lightning:layout>
+</aura:component>
+-->

@@ -1,0 +1,31 @@
+<!-- ====================================================================================== 
+Date    == 28-May-2020
+purpose == Trailhead -> Hands on Challange
+
+Path	== Lightning Data Service Basics for Aura Components -> Manipulate Records with force:recordData
+URL		== https://trailhead.salesforce.com/content/learn/modules/lightning_data_service/lightning_data_service_manipulate_records
+======================================================================================== -->
+<aura:component description="accDisplay" implements="flexipage:availableForRecordHome,force:hasRecordId">
+<aura:attribute name="recordId" type="String" />
+<aura:attribute name="record" type="Object" />
+<aura:attribute name="accountRecord" type="Object" />
+
+<force:recordData recordId="{!v.recordId}"
+                  targetRecord="{!v.record}"
+                  targetFields="{!v.accountRecord}"
+                  fields="Id, Name"/>
+
+<label class="slds-form-element__label">Name: </label>
+<lightning:card title="{!v.accountRecord.Name}" />
+
+<label class="slds-form-element__label">Industry: </label>
+<lightning:formattedText title="Industry" value="{!v.accountRecord.Industry}"/>
+
+<label class="slds-form-element__label">Description: </label>
+<!--<lightning:card title="{!v.accountRecord.Description}"/>-->
+<lightning:formattedText title="Description" value="{!v.accountRecord.Description}" />
+
+<label class="slds-form-element__label">Phone: </label>
+<lightning:formattedPhone title="Phone" value="{!v.accountRecord.Phone}"/>
+
+</aura:component>

@@ -1,0 +1,5 @@
+<apex:page standardController="Contact">
+  <apex:pageBlock mode="mainDetail" >
+    <c:ComponentControllerSystemInformation record="{!record}" />
+  </apex:pageBlock>
+</apex:page>

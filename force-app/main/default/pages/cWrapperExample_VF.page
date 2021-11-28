@@ -1,0 +1,21 @@
+<apex:page controller="cWrapperExample">
+  <apex:form >
+      <apex:pageblock >
+      
+          <apex:pageblocktable value="{!LstWrp}" var="w">
+              <apex:column headervalue="SL No"><apex:outputText >{!w.SLNo}</apex:outputText>  </apex:column>
+              <apex:column headervalue="Select"><apex:inputcheckbox value="{!w.checkbox}"/>  </apex:column>
+              <apex:column headervalue="Account Name"   value="{!w.acc.Name}">               </apex:column>
+              <apex:column headervalue="Account Number" value="{!w.acc.AccountNumber}">      </apex:column>  
+              <apex:column headervalue="Active"         value="{!w.acc.Active__c}">          </apex:column>               
+              <apex:column headervalue="Priority"       value="{!w.acc.CustomerPriority__c}"></apex:column>
+              <apex:column headervalue="Email"          value="{!w.acc.Email__c}">           </apex:column>              
+          </apex:pageblocktable>
+          
+          <apeX:pageblockButtons >
+            <apex:commandButton value="Select" action="{!RedirectSelectedAcc}"/>
+        </apeX:pageblockButtons>
+        
+      </apex:pageblock>
+  </apex:form>
+</apex:page>

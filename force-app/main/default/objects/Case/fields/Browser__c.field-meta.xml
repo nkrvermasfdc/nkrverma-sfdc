@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Browser__c</fullName>
+    <externalId>false</externalId>
+    <label>Browser</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Operating_System__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Google Chrome</fullName>
+                <default>false</default>
+                <label>Google Chrome</label>
+            </value>
+            <value>
+                <fullName>Internet Explorer</fullName>
+                <default>false</default>
+                <label>Internet Explorer</label>
+            </value>
+            <value>
+                <fullName>Firefox</fullName>
+                <default>false</default>
+                <label>Firefox</label>
+            </value>
+            <value>
+                <fullName>Safari</fullName>
+                <default>false</default>
+                <label>Safari</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Windows 8</controllingFieldValue>
+            <controllingFieldValue>Window 10</controllingFieldValue>
+            <controllingFieldValue>Window Vista</controllingFieldValue>
+            <controllingFieldValue>Mac OSx</controllingFieldValue>
+            <valueName>Google Chrome</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Windows 8</controllingFieldValue>
+            <controllingFieldValue>Window 10</controllingFieldValue>
+            <controllingFieldValue>Window Vista</controllingFieldValue>
+            <valueName>Internet Explorer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Windows 8</controllingFieldValue>
+            <controllingFieldValue>Window 10</controllingFieldValue>
+            <controllingFieldValue>Window Vista</controllingFieldValue>
+            <controllingFieldValue>Mac OSx</controllingFieldValue>
+            <valueName>Firefox</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mac OSx</controllingFieldValue>
+            <valueName>Safari</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

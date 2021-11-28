@@ -1,0 +1,51 @@
+<apex:page >
+    <style>
+        .myFormStyle {
+            background-color: Yellow;
+            background-image:url("http://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg")
+        }
+    </style>
+    
+    <apex:form styleClass="myFormStyle">
+        <h1>Congratulations wizard Completed Successfully........nkv</h1>
+    </apex:form> 
+  
+</apex:page>
+
+<!--
+
+
+<apex:page >
+  
+    <style>
+        .myFormStyle {
+            background-color: blue;
+        }
+    </style>
+    
+    <apex:form styleClass="myFormStyle">
+        <h1>Congratulations wizard Completed Successfully........nkv</h1>
+    </apex:form> 
+  
+</apex:page>
+
+
+<apex:page standardcontroller="Contact">
+<style>
+input[type=text] {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: lightgreen;
+}
+
+</style>
+ <apex:form >
+   <apex:pageBlock title="Contact Create/Edit">
+      <apex:pageBlockSection title="Contact Information">
+       <apex:inputField value="{!contact.FirstName}"/>
+      </apex:pageBlockSection>
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>
+-->

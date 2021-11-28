@@ -1,0 +1,14 @@
+<!----------------------------------------------------------------------------------------------- 
+Date    == 09-March-2020
+purpose == Trailhead -- Hands-on Challenge
+Path    == Developer Beginner -> Visualforce Basics  -> Use Simple Variables and Formulas
+URL     == https://trailhead.salesforce.com/en/content/learn/modules/visualforce_fundamentals/visualforce_variables_expressions
+------------------------------------------------------------------------------------------------>
+
+<apex:page >
+    <apex:pageBlock title="User Status">
+        <apex:pageBlockSection columns="1">
+              {! $User.FirstName}
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

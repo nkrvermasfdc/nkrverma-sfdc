@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATT_EXP__Parent_Record_Path__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Path of the parent record under which this folder should be placed.</description>
+    <externalId>false</externalId>
+    <label>Parent Record Path</label>
+    <length>131072</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

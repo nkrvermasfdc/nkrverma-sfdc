@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_Contract_for_Approval_Booking</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Submit DCS Contract</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/800/e?retURL=%2F800%2Fo</url>
+</WebLink>

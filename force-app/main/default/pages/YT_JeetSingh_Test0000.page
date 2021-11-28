@@ -1,0 +1,38 @@
+<apex:page controller="YT_JeetSingh_Test0000">
+  <apex:form > 
+
+<!-- 1 --------------------------------------------------------------------------------------------------------------------------------------------------------------- -->      
+  <!-- {!mymethod} -->
+  {!mymethod2.Name} {!mymethod2.Industry}<br/>
+
+<!-- 2 --------------------------------------------------------------------------------------------------------------------------------------------------------------- -->      
+  <apex:pageBlock title="List of Accounts - 1">
+      <apex:pageBlockTable value="{!acts}" var="b">
+          <apex:column Value="{!b.Name}"/>
+          <apex:column Value="{!b.Type}"/>
+          <apex:column Value="{!b.Industry}"/>
+          <apex:column Value="{!b.Phone}"/>
+          <apex:column Value="{!b.Fax}"/>
+      </apex:pageBlockTable>
+  </apex:pageBlock>
+
+<!-- 3 --------------------------------------------------------------------------------------------------------------------------------------------------------------- -->        
+  <apex:commandButton value="Show All Accounts" action="{!showall}" reRender="mytable"/>
+  <apex:commandButton value="Show Direct Accounts" action="{!direct}" reRender="mytable"/>
+  
+  <apex:pageBlock title="List of Accounts - 2" id="mytable">
+     <apex:pageBlockTable value="{!selectedacts}" var="c">
+        <apex:column Value="{!c.Name}"/>
+        <apex:column Value="{!c.Type}"/>
+        <apex:column Value="{!c.Industry}"/>
+        <apex:column Value="{!c.Phone}"/>
+        <apex:column Value="{!c.Fax}"/>
+    </apex:pageBlockTable>
+  </apex:pageBlock>
+  
+
+  
+<!-- E --------------------------------------------------------------------------------------------------------------------------------------------------------------- -->        
+
+  </apex:form>
+</apex:page>

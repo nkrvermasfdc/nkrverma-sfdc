@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <description>With Logged In User Name</description>
+    <formulas>
+        <name>UserFirstName</name>
+        <dataType>String</dataType>
+        <expression>{!$User.FirstName}</expression>
+    </formulas>
+    <formulas>
+        <name>UserLastName</name>
+        <dataType>String</dataType>
+        <expression>{!$User.LastName}</expression>
+    </formulas>
+    <interviewLabel>Flow1 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Flow1</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Message_Screen</name>
+        <label>Message Screen</label>
+        <locationX>196</locationX>
+        <locationY>63</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>StartingMessage</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(36, 78, 150); font-size: 16px; background-color: rgb(255, 255, 255);&quot;&gt;Hello {!UserFirstName} -{!UserLastName} &lt;/b&gt;&lt;b style=&quot;color: rgb(36, 78, 150); font-size: 16px;&quot;&gt;Good Day &lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>31</locationX>
+        <locationY>63</locationY>
+        <connector>
+            <targetReference>Message_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

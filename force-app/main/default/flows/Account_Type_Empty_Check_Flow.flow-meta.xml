@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <decisions>
+        <description>Accounts &quot;Parent Account&quot; empty value Decision</description>
+        <name>Accounts_Parent_Account_empty_value_Decision</name>
+        <label>Accounts &quot;Parent Account&quot; empty value Decision</label>
+        <locationX>206</locationX>
+        <locationY>52</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>AccountType</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <label>Yes</label>
+        </rules>
+        <rules>
+            <name>No</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>AccountType</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <description>Account Type Empty Check Flow</description>
+    <interviewLabel>Account Type Empty Check Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Type Empty Check Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Accounts_Parent_Account_empty_value_Decision</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <name>AccountType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

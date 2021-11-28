@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <formulas>
+        <description>OpptyDisplayTextResource1</description>
+        <name>OpptyDisplayTextResource1</name>
+        <dataType>String</dataType>
+        <expression>{!$Flow.CurrentRecord}</expression>
+    </formulas>
+    <interviewLabel>Oppty {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Oppty</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Oppty_Flow</name>
+        <label>Oppty Flow</label>
+        <locationX>196</locationX>
+        <locationY>62</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>OpptyFowDisplayText</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;﻿Opportunity :&lt;/b&gt;{!OpptyDisplayTextResource1}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Oppty_Flow</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

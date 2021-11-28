@@ -1,0 +1,12 @@
+<apex:page controller="sessionidclass">
+    
+    <apex:outputText value="{!session}"/> <br/><br/>
+    <apex:repeat value="{!resp}" var="r" >
+        {!r} <br/>
+    </apex:repeat>
+    
+    <apex:form >
+        <apex:commandButton action="{!getsession}" value="Get SessionID"/>
+    </apex:form>
+    
+</apex:page>

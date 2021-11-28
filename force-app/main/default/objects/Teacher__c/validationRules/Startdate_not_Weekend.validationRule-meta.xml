@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Startdate_not_Weekend</fullName>
+    <active>true</active>
+    <description>The Start Date shouldn’t be a weekend</description>
+    <errorConditionFormula>If (
+ABS(MOD(Start_Date__c-DATE(2021,1,1),7))= 1 ||
+ABS(MOD(Start_Date__c-DATE(2021,1,1),7))= 2
+, true, false)</errorConditionFormula>
+    <errorDisplayField>Start_Date__c</errorDisplayField>
+    <errorMessage>Please Select Valid Start date
+Note : The Start Date shouldn’t be a weekend</errorMessage>
+</ValidationRule>

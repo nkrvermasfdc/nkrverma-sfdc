@@ -1,0 +1,18 @@
+<!--<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+</aura:component>-->
+<!-- ====================================================================================== 
+Date    == 19-March-2020
+purpose == Trailhead -> Learning Objective
+Path	== Aura Components Basics -> Input Data Using Forms
+URL		== https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_forms
+======================================================================================== -->
+<aura:component>
+    <aura:attribute name="expenses" type="Expense__c[]"/>
+    <lightning:card title="Expenses">
+        <p class="slds-p-horizontal--small">
+            <aura:iteration items="{!v.expenses}" var="expense">
+                <c:expenseItem expense="{!expense}"/>
+            </aura:iteration>
+        </p>
+    </lightning:card>
+</aura:component>

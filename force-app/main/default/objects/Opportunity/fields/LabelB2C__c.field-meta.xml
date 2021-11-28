@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LabelB2C__c</fullName>
+    <defaultValue>$Label.B2C</defaultValue>
+    <description>LabelB2C</description>
+    <externalId>false</externalId>
+    <inlineHelpText>LabelB2C</inlineHelpText>
+    <label>LabelB2C</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

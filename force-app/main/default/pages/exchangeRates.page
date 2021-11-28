@@ -1,0 +1,16 @@
+<apex:page standardcontroller="Account" extensions="currencyConvertToInr" >
+
+    <apex:pageBlock Title="EURO 2 {!tCurrency}">
+        <apex:pageBlockSection >
+            <apex:outputText label="conversion Rate" value="{!conversionRates }"/>            
+            <apex:pagemessages >    </apex:pagemessages>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+</apex:page>
+
+
+<!--<apex:outputText label="Pressure"    value="{!pressure}"/>
+<apex:outputText label="Humidity"    value="{!humidity}"/>
+<apex:outputText label="Minimum"     value="{!temp_min}"/>
+<apex:outputText label="Maximum"     value="{!temp_max}"/>-->

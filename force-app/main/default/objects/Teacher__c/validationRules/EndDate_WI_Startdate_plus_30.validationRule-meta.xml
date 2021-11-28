@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EndDate_WI_Startdate_plus_30</fullName>
+    <active>true</active>
+    <description>The End Date should be of any date up to 30 days from the Start Date</description>
+    <errorConditionFormula>DATEVALUE(TEXT(End_Date__c )) &gt; 
+(DATEVALUE(TEXT(Start_Date__c ))+30)</errorConditionFormula>
+    <errorDisplayField>End_Date__c</errorDisplayField>
+    <errorMessage>Please Select Valid End date
+Note : The End Date should be of any date up to 30 days from the Start Date</errorMessage>
+</ValidationRule>

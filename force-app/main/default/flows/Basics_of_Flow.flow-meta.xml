@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>Basics of Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Basics of Flow OLD</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>Update_lead</name>
+        <label>Update_lead</label>
+        <locationX>179</locationX>
+        <locationY>155</locationY>
+        <connector>
+            <targetReference>Update_Success</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ErrorMessage</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varLeadid</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>FirstName</field>
+            <value>
+                <elementReference>First_Name_for_Lead</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <screens>
+        <name>ErrorMessage</name>
+        <label>Error Message</label>
+        <locationX>182</locationX>
+        <locationY>364</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ErrorMessage1</name>
+            <fieldText>Error Occured Please contact System Admin{!$Flow.FaultMessage}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>SelectedLead</name>
+        <label>SelectedLead</label>
+        <locationX>181</locationX>
+        <locationY>34</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Update_lead</targetReference>
+        </connector>
+        <fields>
+            <name>SelectedID</name>
+            <fieldText>Selected ID is - {!varLeadid}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>First_Name_for_Lead</name>
+            <dataType>String</dataType>
+            <fieldText>First Name for Lead</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Update_Success</name>
+        <label>Update Success</label>
+        <locationX>406</locationX>
+        <locationY>156</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>MSG</name>
+            <fieldText>Lead record Updated Successfully</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>SelectedLead</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <description>varLeadid</description>
+        <name>varLeadid</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

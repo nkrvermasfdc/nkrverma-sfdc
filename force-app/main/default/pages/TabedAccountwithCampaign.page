@@ -1,0 +1,35 @@
+<Apex:page standardController="Account" showHeader="true" tabStyle="account" extensions="TAWC">
+<Apex:pageBlock >
+    <Apex:tabpanel switchType="ajax">
+    
+        <Apex:tab label="Details" labelwidth="200">
+            <Apex:detail relatedlist="false"/>
+        </Apex:tab>       
+        
+        <Apex:tab label="Contacts" labelwidth="200">
+            <Apex:relatedlist List="Contacts"/>
+        </Apex:tab>       
+
+        <Apex:tab label="Opportunities" labelwidth="200">
+            <Apex:relatedlist List="Opportunities"/>
+        </Apex:tab>       
+
+        <Apex:tab label="Cases" labelwidth="200">
+            <Apex:relatedlist List="Cases"/>
+        </Apex:tab>       
+
+       <Apex:tab label="Campaigns" labelwidth="200">
+           <Apex:pageblocktable Value="{!Camps}" var="c">
+               <Apex:column value="{!c.Name}"/>
+               <Apex:column value="{!c.Description}"/>            
+               <Apex:column value="{!c.Startdate}"/>
+               <Apex:column value="{!c.Enddate}"/>   
+               <Apex:column value="{!c.Budgetedcost}"/>
+               <Apex:column value="{!c.Actualcost}"/>                                       
+               <Apex:column value="{!c.Status}"/>               
+           </Apex:pageblocktable>
+       </Apex:tab>     
+    
+    </Apex:tabpanel>
+</Apex:pageBlock>    
+</Apex:Page>

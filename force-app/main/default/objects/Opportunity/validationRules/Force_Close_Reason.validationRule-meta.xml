@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Force_Close_Reason</fullName>
+    <active>false</active>
+    <errorConditionFormula>IsClosed  = TRUE &amp;&amp; 
+ISBLANK( TEXT(Close_Reason__c) )</errorConditionFormula>
+    <errorDisplayField>Close_Reason__c</errorDisplayField>
+    <errorMessage>Please select a valid reason for close</errorMessage>
+</ValidationRule>

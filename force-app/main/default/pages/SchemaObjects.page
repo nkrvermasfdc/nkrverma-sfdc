@@ -1,0 +1,33 @@
+<apex:page controller="SchemaObjects">
+    <apex:form id="od">
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                    
+                <apex:pageBlockSectionitem >
+                      <apex:selectList size="4" Value="{!SelectedObj}">
+                        <apex:selectOptions value="{!objects}"/>
+                        <apex:actionSupport event="onchange" action="{!details}" reRender="od"/>
+                      </apex:selectList>
+                </apex:pageBlockSectionitem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!objdescription}" id="od" style="width:100px;" />
+                </apex:pageBlockSectionItem>
+                
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection >                
+                <apex:pageBlockSectionItem >
+                    <apex:panelGrid >
+                        <apex:panelGroup >
+                            <apex:selectList Value="{!sfields}" multiselect="true" style="width:200px;height:150px;">
+                                <apex:selectOptions value="{!fnsoptions}"/>                                
+                            </apex:selectList>
+                        </apex:panelGroup>
+                    </apex:panelGrid>                         
+                </apex:pageBlockSectionItem>                
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

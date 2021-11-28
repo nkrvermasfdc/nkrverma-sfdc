@@ -1,0 +1,18 @@
+<!----------------------------------------------------------------------------------------------- 
+Date    == 09-March-2020
+purpose == Trailhead -- Hands-on Challenge
+Path    == Developer Beginner -> Visualforce Basics  -> Use Standard Controllers
+URL     == https://trailhead.salesforce.com/en/content/learn/modules/visualforce_fundamentals/visualforce_standard_controllers
+------------------------------------------------------------------------------------------------>
+
+<apex:page standardController="Contact">
+    
+    <apex:pageBlock title="Contact Summary">
+        <apex:pageBlockSection >
+            Name		: {! Contact.FirstName }  <br/>
+            Phone		: {! Contact.LastName }   <br/>
+            Industry	: {! Contact.Owner.Email } <br/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+</apex:page>

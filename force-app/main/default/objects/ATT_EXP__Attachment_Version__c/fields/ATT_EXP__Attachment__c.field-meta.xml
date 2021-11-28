@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATT_EXP__Attachment__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Attachment for which this Version is created.</description>
+    <externalId>false</externalId>
+    <label>Attachment</label>
+    <referenceTo>ATT_EXP__Attachment__c</referenceTo>
+    <relationshipLabel>Attachment Versions</relationshipLabel>
+    <relationshipName>Attachment_Versions</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

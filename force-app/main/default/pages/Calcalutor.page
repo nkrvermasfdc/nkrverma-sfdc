@@ -1,0 +1,67 @@
+<apex:page controller="Calculator_Controller">
+    <apex:form >
+        <apex:pageBlock title="Calculator">
+        
+            <table border="3" bgcolor="azure">
+                <tr>
+                <td bgcolor="azure">
+            
+                <table>
+                    <tr>
+                        <td> <apex:inputfield value="{!calc.Input__c}" ID="inutvalues" style="width:173px" /> </td>
+                                            
+                    </tr>
+                </table>
+            
+               <table>    
+                    <tr>
+                        <td> <apex:commandButton value="    7    "   action="{!seven}" reRender="inutvalues"/> </td>
+                        <td> <apex:commandButton value="    8    "   action="{!eight}" reRender="inutvalues"/> </td>
+                        <td> <apex:commandButton value="    9    "   action="{!nine}"  reRender="inutvalues"/> </td>
+                        <td> <apex:commandButton value="     /   "   action="{!devide}" reRender="inutvalues"/> </td>                     
+                    </tr>
+                    <tr>
+                        <td> <apex:commandButton value="    4    "   action="{!four}" reRender="inutvalues"/> </td>
+                        <td> <apex:commandButton value="    5    "   action="{!five}" reRender="inutvalues"/> </td>
+                        <td> <apex:commandButton value="    6    "   action="{!six}" reRender="inutvalues"/> </td>   
+                        <td> <apex:commandButton value="     *     " action="{!multply}" reRender="inutvalues"/> </td>
+                    </tr>
+                    <tr>
+                        <td> <apex:commandButton value="    1    "   action="{!one}" reRender="inutvalues"/> </td>
+                        <td> <apex:commandButton value="    2    "   action="{!two}" reRender="inutvalues"/> </td>
+                        <td> <apex:commandButton value="    3    "   action="{!three}" reRender="inutvalues"/> </td>  
+                        <td> <apex:commandButton value="     -     " action="{!minus}" reRender="inutvalues"/> </td>                 
+                    </tr>
+                
+                    <tr>
+                        <td> <apex:commandButton value="     .    "  action="{!dot}" reRender="inutvalues"/> </td>
+                        <td> <apex:commandButton value="    0    "   action="{!zero}" reRender="inutvalues"/> </td>
+                        <td> <apex:commandButton value="  AC   "     action="{!cls}" reRender="inutvalues"/> </td>  
+                        <td> <apex:commandButton value="     +     " action="{!plus}" reRender="inutvalues"/> </td>                                    
+                    </tr>
+                </table>
+            
+                <table>
+                    <tr>
+                        <td> <apex:commandButton value="                            =                           "/> </td>
+                    </tr>    
+                </table>
+                
+                </td>
+                <!-- <td>
+                    <input type="text" name="item" size="10" />
+                </td> -->
+            </tr>    
+            </table>
+                                    
+                                                                                                                                                 
+                
+        
+            
+            <!-- <apex:pageBlockTable value="{! Test }" var="KP" columns="4">        
+                <apex:commandbutton reRender="Input" Value="1"></apex:commandbutton>
+            </apex:pageblockTable> -->
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
